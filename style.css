@@ -1,0 +1,742 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: red;
+}
+
+p {
+    font-size: 20px;
+}
+
+h2 {
+    color: blue;
+}
+.moto {
+    background-color: white;
+    width: 280px;
+    margin: 15px;
+    padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.moto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.moto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.moto h3 {
+    font-size: 22px;
+}
+
+.moto button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.moto button:hover {
+    background-color: darkred;
+}
+nav {
+    background-color: black;
+    padding: 25px 15px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: red;
+}
+.accueil {
+    background-color: #222;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.accueil h1 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.accueil p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.accueil button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+html {
+    scroll-behavior: smooth;
+}
+.contact {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+.contact h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin: 10px;
+}
+.contact form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 8px;
+    font-size: 16px;
+}
+.moto:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+.apropos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.apropos h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.apropos p {
+    max-width: 700px;
+    margin: 10px auto;
+}
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 5px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .accueil h1 {
+        font-size: 30px;
+    }
+
+    .accueil p {
+        font-size: 18px;
+    }
+
+    .moto {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .moto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact {
+        padding: 30px 15px;
+    }
+}
+.logo-container {
+    width: 120px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px gray;
+    z-index: 1000;
+}
+
+.whatsapp:hover {
+    transform: scale(1.05);
+}
+#recherche {
+    display: block;
+    width: 300px;
+    padding: 12px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.moto {
+    background-color: white;
+    width: 280px;
+    margin: 15px;
+    padding: 18px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.moto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.moto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.moto h3 {
+    color: #222;
+    font-size: 21px;
+    margin: 15px 0 10px;
+}
+
+.moto p {
+    font-size: 16px;
+    color: #555;
+}
+
+.moto button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.moto button:hover {
+    background-color: #128C4A;
+}
+.slogan {
+    color: #ffcc00;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .slogan {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+}
+/* Amélioration de la page d'accueil */
+
+.accueil {
+    background: linear-gradient(135deg, #111111, #333333);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 40px;
+}
+
+.accueil h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.accueil p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.accueil button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accueil button:hover {
+    background-color: #b91c1c;
+    transform: translateY(-3px);
+}
+/* Amélioration du menu */
+
+nav {
+    background-color: #111111;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #e63946;
+    color: white;
+}
+/* Nouveau design des cartes de véhicules */
+
+.moto {
+    background-color: white;
+    width: 280px;
+    margin: 18px;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.moto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.moto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.moto h3 {
+    color: #222;
+    font-size: 21px;
+    margin: 15px 0;
+}
+
+.moto p {
+    color: #555;
+    font-size: 16px;
+}
+
+.moto button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.moto button:hover {
+    background-color: #b91c1c;
+}
+/* Mise en valeur du titre et du slogan */
+
+.accueil h1 {
+    font-size: 44px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.accueil .slogan {
+    color: #ffcc00;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.accueil p:not(.slogan) {
+    color: #eeeeee;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+    .accueil h1 {
+        font-size: 30px;
+    }
+
+    .accueil .slogan {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+/* Nouvelle bannière de Moto Market */
+
+.accueil {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("banniere-moto-market.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 450px;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 15px 15px;
+    margin-bottom: 35px;
+}
+
+.accueil h1 {
+    color: white;
+    font-size: 44px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.accueil p {
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.accueil .slogan {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .accueil {
+        min-height: 350px;
+        padding: 40px 15px;
+        background-position: center;
+    }
+
+    .accueil h1 {
+        font-size: 30px;
+    }
+}
+/* Texte principal de la bannière */
+
+.accueil h1 {
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+.accueil .slogan {
+    color: #ffcc00;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.accueil p:not(.slogan) {
+    font-size: 19px;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px black;
+}
+
+@media (max-width: 600px) {
+    .accueil h1 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    .accueil .slogan {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+/* Boutons modernes de la page d'accueil */
+
+.accueil button {
+    background: linear-gradient(135deg, #ff2020, #c90000);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 28px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.accueil button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(255, 0, 0, 0.5);
+}
+/* Correction de la bannière d'accueil */
+
+.accueil {
+    min-height: 350px;
+    padding: 50px 20px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.accueil h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.accueil p {
+    margin: 8px 0;
+}
+
+.accueil .slogan {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.accueil a {
+    display: inline-block;
+    margin: 5px;
+}
+
+.accueil button {
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .accueil h1 {
+        font-size: 26px;
+    }
+
+    .accueil {
+        min-height: 300px;
+        padding: 30px 12px;
+    }
+}
+/* Adaptation de Moto Market aux téléphones */
+
+@media (max-width: 600px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        padding: 12px 8px;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 4px;
+        padding: 8px;
+    }
+
+    .logo-container {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: 65px;
+        margin-bottom: 8px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 65px;
+        object-fit: contain;
+    }
+
+    .accueil {
+        min-height: 300px;
+        padding: 35px 12px;
+        margin-bottom: 20px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .accueil h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .accueil .slogan {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .accueil p:not(.slogan) {
+        font-size: 16px;
+    }
+
+    .accueil button {
+        padding: 12px 18px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .moto {
+        display: block;
+        box-sizing: border-box;
+        width: calc(100% - 30px);
+        max-width: 360px;
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .moto img {
+        width: 100%;
+        height: 190px;
+        object-fit: contain;
+    }
+
+    #recherche {
+        box-sizing: border-box;
+        width: calc(100% - 30px);
+        max-width: 360px;
+    }
+
+    .contact {
+        padding: 30px 15px;
+        box-sizing: border-box;
+    }
+
+    .contact form {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .contact input,
+    .contact textarea {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    .whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px;
+    }
+}
