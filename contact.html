@@ -1,80 +1,76 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact - Moto Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Moto Market</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-   <nav>
+    <nav>
+        <div class="logo-container">
+            <img src="logo-moto-market.png" alt="Logo de Moto Market" class="logo">
+        </div>
 
-    <div class="logo-container">
-        <img src="logo-moto-market.png" alt="Logo Moto Market" class="logo">
-    </div>
-
-    <a href="index.html">Accueil</a>
-    <a href="motos.html">Nos motos</a>
-    <a href="voitures.html">Nos voitures</a>
-    <a href="apropos.html">À propos</a>
-    <a href="contact.html">Contact</a>
-
-</nav>
+        <a href="index.html">Inicio</a>
+        <a href="motos.html">Nuestras motos</a>
+        <a href="voitures.html">Nuestros coches</a>
+        <a href="apropos.html">Sobre nosotros</a>
+        <a href="contact.html">Contacto</a>
+    </nav>
 
     <section class="contact">
+        <h1>Contáctanos</h1>
 
-        <h1>Contactez-nous</h1>
+        <p>¿Quieres comprar una moto? Contáctanos.</p>
 
-        <p>Vous souhaitez acheter une moto ? Contactez-nous.</p>
+        <form onsubmit="enviarMensaje(); return false;">
+            <input type="text" id="nom" placeholder="Tu nombre" required>
 
+            <input type="tel" id="telephone" placeholder="Tu teléfono" required>
 
-        <form onsubmit="envoyerMessage(); return false;">
+            <input type="email" id="email" placeholder="Tu correo electrónico" required>
 
-    <input type="text" id="nom" placeholder="Votre nom" required>
+            <textarea id="message" placeholder="Tu mensaje" required></textarea>
 
-    <input type="tel" id="telephone" placeholder="Votre téléphone" required>
+            <button type="submit">Enviar por WhatsApp</button>
+        </form>
+    </section>
 
-    <input type="email" id="email" placeholder="Votre email" required>
+    <footer>
+        <p>© 2026 Moto Market</p>
+        <p>Venta de motos y coches</p>
+    </footer>
 
-    <textarea id="message" placeholder="Votre message" required></textarea>
-
-    <button type="submit">Envoyer sur WhatsApp</button>
-
-</form>
+    <a class="whatsapp"
+       href="https://wa.me/2290162905754?text=Hola%2C%20vengo%20de%20la%20web%20de%20Moto%20Market."
+       target="_blank">
+        WhatsApp
+    </a>
 
     <script>
-    function envoyerMessage() {
+        function enviarMensaje() {
+            const nom = document.getElementById("nom").value;
+            const telefono = document.getElementById("telephone").value;
+            const email = document.getElementById("email").value;
+            const mensaje = document.getElementById("message").value;
 
-        let nom = document.getElementById("nom").value;
-        let telephone = document.getElementById("telephone").value;
-        let email = document.getElementById("email").value;
-        let message = document.getElementById("message").value;
+            const texto =
+                "Hola, vengo de la web de Moto Market.%0A%0A" +
+                "Nombre: " + encodeURIComponent(nom) + "%0A" +
+                "Teléfono: " + encodeURIComponent(telefono) + "%0A" +
+                "Correo electrónico: " + encodeURIComponent(email) + "%0A" +
+                "Mensaje: " + encodeURIComponent(mensaje);
 
-        let texte =
-            "Bonjour, je viens de votre site Moto Market.%0A%0A" +
-            "Nom : " + encodeURIComponent(nom) + "%0A" +
-            "Téléphone : " + encodeURIComponent(telephone) + "%0A" +
-            "Email : " + encodeURIComponent(email) + "%0A" +
-            "Message : " + encodeURIComponent(message);
-
-        window.open(
-            "https://wa.me/2290162905754?text=" + texte,
-            "_blank"
-        );
-    }
-</script>
-<footer>
-    <p>© 2026 Moto Market</p>
-    <p>Vente de motos et de voitures</p>
-</footer>
-<a class="whatsapp" 
-   href="https://wa.me/2290162905754?text=Bonjour%2C%20je%20viens%20de%20votre%20site%20Moto%20Market."
-   target="_blank">
-    WhatsApp
-</a>
+            window.open(
+                "https://wa.me/2290162905754?text=" + texto,
+                "_blank"
+            );
+        }
+    </script>
 
 </body>
-
 </html>
