@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <title>À propos - Moto Market</title>
+    <title>Sobre Moto Market</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -55,7 +55,38 @@
    target="_blank">
     WhatsApp
 </a>
+<script>
+const traduccionesAcerca = {
+    "Accueil": "Inicio",
+    "Nos motos": "Nuestras motos",
+    "Nos voitures": "Nuestros coches",
+    "À propos": "Sobre nosotros",
+    "À propos de Moto Market": "Sobre Moto Market",
+    "Contact": "Contacto",
+    "Bienvenue sur Moto Market, votre site de vente de motos.":
+        "Bienvenido a Moto Market, tu sitio de venta de motos.",
+    "Nous proposons différents modèles de motos neuves et d'occasion.":
+        "Ofrecemos diferentes modelos de motos nuevas y de segunda mano.",
+    "Notre objectif est de vous aider à trouver la moto qui correspond\n            à vos besoins.":
+        "Nuestro objetivo es ayudarte a encontrar la moto que se adapte a tus necesidades.",
+    "Pour toute information, vous pouvez nous contacter directement\n            par WhatsApp.":
+        "Si necesitas información, puedes contactarnos directamente por WhatsApp.",
+    "Vente de motos et de voitures": "Venta de motos y coches",
+    "WhatsApp": "WhatsApp"
+};
 
+document.querySelectorAll("body *").forEach(element => {
+    if (element.children.length === 0) {
+        const texte = element.textContent.trim().replace(/\s+/g, " ");
+        for (const [frances, espanol] of Object.entries(traduccionesAcerca)) {
+            if (texte === frances.replace(/\s+/g, " ")) {
+                element.textContent = espanol;
+            }
+        }
+    }
+});
+</script>
+</body>
 </body>
 
 </html>
