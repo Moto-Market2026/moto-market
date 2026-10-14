@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Vente de motos</title>
+    <title>Moto Market - Venta de motos y coches</title>
 </head>
 
 <body>
@@ -14,11 +14,11 @@
        <img src="logo-moto-market.png" alt="Logo Moto Market" class="logo">
     </div>
 
-    <a href="#accueil">Accueil</a>
-    <a href="motos.html">Nos motos</a>
-    <a href="voitures.html">Nos voitures</a>
-    <a href="apropos.html">À propos</a>
-    <a href="contact.html">Contact</a>
+    <a href="#accueil">Inicio</a>
+    <a href="motos.html">Motos</a>
+    <a href="voitures.html">Coches</a>
+    <a href="apropos.html">Sobre nosotros</a>
+    <a href="contact.html">Contacto</a>
    </nav>
    <section class="accueil" id="accueil">
      <p class="slogan">VOTRE PROCHAINE VOITURE OU MOTO VOUS ATTEND</p>
@@ -151,6 +151,60 @@ function envoyerMessage() {
    target="_blank">
     WhatsApp
 </a>
+<script>
+const traductions = {
+    "VOTRE PROCHAINE VOITURE OU MOTO VOUS ATTEND":
+        "TU PRÓXIMO COCHE O MOTO TE ESPERA",
+    "Bienvenue chez Moto Market":
+        "Bienvenido a Moto Market",
+    "Découvrez nos motos disponibles à la vente":
+        "Descubre nuestras motos disponibles",
+    "Voir les motos": "Ver motos",
+    "Voir les voitures": "Ver coches",
+    "Nos motos": "Nuestras motos",
+    "Moto moderne, confortable et idéale pour la ville.":
+        "Moto moderna, cómoda e ideal para la ciudad.",
+    "Moto fiable, confortable et adaptée aux déplacements quotidiens.":
+        "Moto fiable, cómoda y adecuada para los desplazamientos diarios.",
+    "Moto sportive, puissante et agréable à conduire.":
+        "Moto deportiva, potente y agradable de conducir.",
+    "Moto sportive performante, idéale pour les passionnés.":
+        "Moto deportiva de alto rendimiento, ideal para los apasionados.",
+    "Moto sportive haut de gamme avec de très bonnes performances.":
+        "Moto deportiva de alta gama con excelentes prestaciones.",
+    "Prix :": "Precio:",
+    "Disponible immédiatement": "Disponible de inmediato",
+    "Acheter": "Comprar",
+    "Contactez-nous": "Contáctanos",
+    "Vous êtes intéressé par une moto ? Remplissez le formulaire.":
+        "¿Te interesa una moto? Rellena el formulario.",
+    "Envoyer": "Enviar",
+    "Vente de motos et de voitures": "Venta de motos y coches"
+};
+
+document.querySelectorAll("body *").forEach(element => {
+    if (element.children.length === 0) {
+        const texte = element.textContent.trim();
+        if (traductions[texte]) {
+            element.textContent = traductions[texte];
+        }
+    }
+});
+
+document.querySelectorAll("input, textarea").forEach(element => {
+    const traductionsChamps = {
+        "Votre nom": "Tu nombre",
+        "Votre téléphone": "Tu teléfono",
+        "Votre email": "Tu correo electrónico",
+        "Votre message": "Tu mensaje"
+    };
+
+    if (traductionsChamps[element.placeholder]) {
+        element.placeholder = traductionsChamps[element.placeholder];
+    }
+});
+</script>
+</body>
 </body>
 
 </html>
